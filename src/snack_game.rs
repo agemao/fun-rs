@@ -125,10 +125,10 @@ impl Game{
         }
 
         let new_head=(new_x as u16,new_y as u16);
-        //if self.snake.contains(&new_head){
-        //    self.game_over=true;
-        //    return;
-        //}
+        if self.snake.contains(&new_head){
+            self.game_over=true;
+            return;
+        }
 
         self.snake.push_front(new_head);
 
